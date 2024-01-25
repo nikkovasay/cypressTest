@@ -1,0 +1,21 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run cy:run --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d --spec cypress\e2e\3-custom-tests\Login.cy.js --browser chrome
+  displayName: 'npm install and build'
