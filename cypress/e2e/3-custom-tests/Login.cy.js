@@ -2,11 +2,11 @@ import { getAndVisible } from '../../Utils/Utils'
 
 
 //Elements
-var txtUsername = 'input[name="username"]'
-var txtPassword = 'input[name="password"]'
-var btnSubmit = 'button[id="submit"]'
-var lblLoggedInBanner = '.post-title'
-var btnLogout = '.wp-block-button__link'
+const txtUsername = 'input[name="username"]'
+const txtPassword = 'input[name="password"]'
+const btnSubmit = 'button[id="submit"]'
+const lblLoggedInBanner = '.post-title'
+const btnLogout = '.wp-block-button__link'
 
 context('Login', () => {
   beforeEach(() => {
@@ -14,8 +14,6 @@ context('Login', () => {
   })
 
   it('should log in to the test website and log out', () => {
-
-
 
     //Type in username 
     getAndVisible(txtUsername).type("student")
@@ -34,8 +32,6 @@ context('Login', () => {
 
     cy.get(txtUsername).then(
       (txtPassword) => {
-
-
         if (txtPassword) {
           getAndVisible(txtUsername).type('problem')
         } else {
