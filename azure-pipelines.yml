@@ -15,7 +15,4 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run cy:run --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d --spec cypress\e2e\3-custom-tests\Login.cy.js --browser chrome
-  displayName: 'npm install and build'
+
