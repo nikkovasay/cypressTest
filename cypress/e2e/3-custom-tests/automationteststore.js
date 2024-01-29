@@ -8,13 +8,12 @@ context('Automation Test Store', () => {
     cy.visit('https://www.automationteststore.com/')
   })
 
-//   it('should click on the first item using item text', ()=>{
-//     cy.scrollTo(0, 500)
-//     cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then((itemHeaderText)=>{
-//          console.log('Selected the following item: ' + itemHeaderText.text())
-//     })
-
-//   })  
+  it.only('should click on the first item using item text', ()=>{
+    cy.scrollTo(0, 500)
+    cy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then((itemHeaderText)=>{
+         console.log('Selected the following item: ' + itemHeaderText.text())
+    })
+  })  
 
 
   it('should submit a successful submission via contact us form', () => {

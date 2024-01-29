@@ -6,12 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy": "cypress open",
-    "cy:run" : "cypress run"
+    "cy:run": "cypress run",
+    "triggerTest": "npx cypress run --browser chrome --spec cypress\\e2e\\3-custom-tests\\*.js --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d",
+    "delete-reports:junit": "rm -rf cypress/results/junit/* || true",
+    "delete-reports:mochawesome": "rm -rf cypress/results/mochawesome/* || true",
+    "prereport:junit": "npm run delete-reports:junit",
+    "prereport:mochawesome": "npm run delete-reports:mochawesome",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "mochawesome-merge": " npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json "
   },
   "author": "Nikko Vasay",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.3",
-    "cypress-xpath": "^2.0.1"
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-xpath": "^2.0.1",
+    "junit-merge": "^2.0.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

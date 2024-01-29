@@ -98,28 +98,28 @@ context("Contact Us Page", () => {
 
 
 
-    // it("fill out and submit the contact form", () => {
-    //   cy.document().should("have.a.property", "charset").and("eq", "UTF-8");
-    //   cy.title().should("include", "WebDriver");
-    //   contactUsPage.typeFirstName(sampleData.first_name)
-    //   contactUsPage.typeLastName(sampleData.last_name)
-    //   contactUsPage.typeEmail(sampleData.email)
-    //   cy.log(userData[0].id)
-    //   contactUsPage.typeComments(userData[0].id)
-    //   contactUsPage.clickSubmitButton()
+    it.only("fill out and submit the contact form", () => {
+      cy.document().should("have.a.property", "charset").and("eq", "UTF-8");
+      cy.title().should("include", "WebDriver");
+      contactUsPage.typeFirstName(Cypress.env('first_name'))
+      contactUsPage.typeLastName(sampleData.last_name)
+      contactUsPage.typeEmail(sampleData.email)
+      cy.log(userData[0].id)
+      contactUsPage.typeComments(userData[0].id)
+      contactUsPage.clickSubmitButton()
 
-    //   getAndVisible(lblThankYou).should(
-    //     "have.text",
-    //     "Thank You for your Message!"
-    //   );
-    //   cy.url().should(
-    //     "eq",
-    //     "https://webdriveruniversity.com/Contact-Us/contact-form-thank-you.html"
-    //   );
+      getAndVisible(lblThankYou).should(
+        "have.text",
+        "Thank You for your Message!"
+      );
+      cy.url().should(
+        "eq",
+        "https://webdriveruniversity.com/Contact-Us/contact-form-thank-you.html"
+      );
 
-    //   console.log("Test has completed");
-    //   cy.log("Test has completed - cy log");
-    // });
+      console.log("Test has completed");
+      cy.log("Test has completed - cy log");
+    });
 
     // it("fill out and submit the contact form", () => {
     //   getAndVisible(txtFirstName).type("Nikko");

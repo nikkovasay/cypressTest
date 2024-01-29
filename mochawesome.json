@@ -1,0 +1,358 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-01-29T02:29:19.898Z",
+    "end": "2024-01-29T02:30:34.200Z",
+    "duration": 74302
+  },
+  "results": [
+    {
+      "uuid": "e08f72b7-4e7a-467c-ab9d-c26e26b1d97a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-custom-tests\\api-test.js",
+      "file": "cypress\\e2e\\3-custom-tests\\api-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c23f8196-fcd0-4fb3-bb9e-4ab20002be11",
+          "title": "API Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test GET method",
+              "fullTitle": "API Tests Test GET method",
+              "timedOut": null,
+              "duration": 1624,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', 'https://jsonplaceholder.typicode.com/posts/1').then(response => {\n  expect(response.status).to.equal(200);\n  expect(response.body).to.have.property('userId', 1);\n});",
+              "err": {},
+              "uuid": "20b244fd-67dd-49e8-bf02-0ede57a30d41",
+              "parentUUID": "c23f8196-fcd0-4fb3-bb9e-4ab20002be11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20b244fd-67dd-49e8-bf02-0ede57a30d41"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a62e3ea1-5a51-48d1-b65f-1e0c2fd7058c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-custom-tests\\automationteststore.js",
+      "file": "cypress\\e2e\\3-custom-tests\\automationteststore.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fb8b78d9-264f-4370-9e20-d655c81727ed",
+          "title": "Automation Test Store",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should click on the first item using item text",
+              "fullTitle": "Automation Test Store should click on the first item using item text",
+              "timedOut": null,
+              "duration": 14646,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo(0, 500);\ncy.get('.prdocutname').contains('Skinsheen Bronzer Stick').click().then(itemHeaderText => {\n  console.log('Selected the following item: ' + itemHeaderText.text());\n});",
+              "err": {},
+              "uuid": "b938c4c2-c1af-41ae-b447-0382d01c3f5a",
+              "parentUUID": "fb8b78d9-264f-4370-9e20-d655c81727ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b938c4c2-c1af-41ae-b447-0382d01c3f5a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14646,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "99e76c36-ff85-47ce-9b2e-1ca86f7beacb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-custom-tests\\contact-us.js",
+      "file": "cypress\\e2e\\3-custom-tests\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d29f86c3-e524-4c29-ab30-4f76a4738152",
+          "title": "Contact Us Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e5a8ba87-f248-4a35-bf01-0165ccac32ef",
+              "title": "Test contact form via Webdriver University",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "fill out and submit the contact form",
+                  "fullTitle": "Contact Us Page Test contact form via Webdriver University fill out and submit the contact form",
+                  "timedOut": null,
+                  "duration": 6063,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.document().should(\"have.a.property\", \"charset\").and(\"eq\", \"UTF-8\");\ncy.title().should(\"include\", \"WebDriver\");\n_contactUsPage.default.typeFirstName(Cypress.env('first_name'));\n_contactUsPage.default.typeLastName(sampleData.last_name);\n_contactUsPage.default.typeEmail(sampleData.email);\ncy.log(userData[0].id);\n_contactUsPage.default.typeComments(userData[0].id);\n_contactUsPage.default.clickSubmitButton();\n(0, _Utils.getAndVisible)(lblThankYou).should(\"have.text\", \"Thank You for your Message!\");\ncy.url().should(\"eq\", \"https://webdriveruniversity.com/Contact-Us/contact-form-thank-you.html\");\nconsole.log(\"Test has completed\");\ncy.log(\"Test has completed - cy log\");",
+                  "err": {},
+                  "uuid": "5fdc44be-09ab-4efc-9ad8-bfb912aa4266",
+                  "parentUUID": "e5a8ba87-f248-4a35-bf01-0165ccac32ef",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5fdc44be-09ab-4efc-9ad8-bfb912aa4266"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6063,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0a620ae2-af1d-4de7-9424-29fa5357b118",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-custom-tests\\iterate-Over-elements.js",
+      "file": "cypress\\e2e\\3-custom-tests\\iterate-Over-elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "616accf6-bf74-43e1-899c-8847052c4203",
+          "title": "Automation Test Store - iterate elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should submit a successful submission via contact us form",
+              "fullTitle": "Automation Test Store - iterate elements should submit a successful submission via contact us form",
+              "timedOut": null,
+              "duration": 8526,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(searchBar).should('be.visible').type(\"Stroller{enter}\");\ncy.xpath(\"//span[@class='a-size-medium a-color-base a-text-normal']\").each(($item, index, $list) => {\n  cy.log(\"Index : \" + index + \" - Item name : \" + $item.text());\n  if ($item.text().includes('Baby Doll Stroller')) {\n    cy.wrap($item).should('be.visible').click({\n      force: true\n    });\n  }\n});\n// cy.get('.prdocutname').each(($item, index, $list) => {\n//       cy.log(\"Index: \" + index + \" : \" + $item.text())\n//       if($item.text().includes('BeneFit Girl Meets Pearl')) {\n//           cy.wrap($item).click()\n//       }\n// })\n// cy.xpath('//span[text()=\"BeneFit Girl Meets Pearl\"]').should('be.visible')",
+              "err": {},
+              "uuid": "14af6aef-87e2-41d9-823e-d49e1dde112a",
+              "parentUUID": "616accf6-bf74-43e1-899c-8847052c4203",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "14af6aef-87e2-41d9-823e-d49e1dde112a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8526,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8f82e1be-7447-4939-8e05-3900633fd32d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-custom-tests\\Login.cy.js",
+      "file": "cypress\\e2e\\3-custom-tests\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "346e8175-e5a3-4236-83af-70058fb6705e",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 6528,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();\ncy.get(txtUsername).then(txtPassword => {\n  if (txtPassword) {\n    (0, _Utils.getAndVisible)(txtUsername).type('problem');\n  } else {\n    (0, _Utils.getAndVisible)(txtUsername).type('not a problem');\n  }\n});",
+              "err": {},
+              "uuid": "126c36f0-da4f-4a0d-a25a-17ecd4e843bb",
+              "parentUUID": "346e8175-e5a3-4236-83af-70058fb6705e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "126c36f0-da4f-4a0d-a25a-17ecd4e843bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6528,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
