@@ -17,9 +17,9 @@ pipeline {
                         bat 'npm run triggerTest'
                     }
                 }
-                stage('Slave Node 1') {
+                stage('Slave Node 2') {
                     agent {
-                        label "remote_node1"
+                        label "remote_node2"
                     }
                     steps {
                         git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
