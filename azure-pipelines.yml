@@ -1,0 +1,6 @@
+jobs:
+- job: Job1
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - script: echo "Run your tests here"
