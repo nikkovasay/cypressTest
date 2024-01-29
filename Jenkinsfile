@@ -11,7 +11,7 @@ pipeline {
                         label "remote_node1"
                     }
                     steps {
-                        git url 'https://github.com/nikkovasay/cypressTest.git'
+                        git url: 'https://github.com/nikkovasay/cypressTest.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerTest'
@@ -22,7 +22,7 @@ pipeline {
                         label "remote_node2"
                     }
                     steps {
-                        git url 'https://github.com/nikkovasay/cypressTest.git'
+                        git url: 'https://github.com/nikkovasay/cypressTest.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerTest'
