@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy": "cypress open",
     "cy:run": "cypress run",
-    "triggerTest": "npx cypress run --browser chrome --spec cypress\\e2e\\3-custom-tests\\*.js --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d --parallel",
+    "triggerTest": "npx cypress run --headed --browser chrome --spec cypress\\e2e\\3-custom-tests\\*.js --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d --parallel",
     "delete-reports:junit": "rm -rf cypress/results/junit/* || true",
     "delete-reports:mochawesome": "rm -rf cypress/results/mochawesome/* || true",
     "prereport:junit": "npm run delete-reports:junit",
