@@ -6,9 +6,9 @@ pipeline {
     stages {
         stage('Cypress Parallel Test Suite') {
             parallel {
-                stage('Slave Node 3') {
+                stage('Slave Node 1') {
                     agent {
-                        label "remote_node3"
+                        label "remote_node1"
                     }
                     steps {
                         git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
