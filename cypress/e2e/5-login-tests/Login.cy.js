@@ -44,4 +44,23 @@ context('Login', () => {
 
   })
 
+  it('should log in to the test website and log out', () => {
+
+    //Type in username 
+    getAndVisible(txtUsername).type("student")
+
+    //Type in password
+    getAndVisible(txtPassword).type("Password123")
+
+    //Click submit
+    getAndVisible(btnSubmit).click()
+
+    //verify banner is visible and text matches logged in state
+    getAndVisible(lblLoggedInBanner).should('contain.text', 'Logged In Successfully')
+
+    //log out 
+    getAndVisible(btnLogout).click()
+
+  })
+
 })
