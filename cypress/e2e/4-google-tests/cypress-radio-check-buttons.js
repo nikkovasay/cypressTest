@@ -34,7 +34,7 @@ describe('check and uncheck all boxes', () => {
 
     it.only('check and vlidate check boxes', () => {
         
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr','target').click({force : true})
+        // cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr','target').click({force : true})
 
         cy.get("#radio-buttons").find('input[value*="orange"]').check()
         cy.get("#radio-buttons").find('input[name*="color"]').eq(1).check().should('be.checked')
