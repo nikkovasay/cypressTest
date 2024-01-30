@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Cypress Parallel Test Suite') {
             parallel {
-                stage('Slave Node 1') {
+                stage('Slave Node 3') {
                     agent {
                         label "remote_node1"
                     }
@@ -14,20 +14,20 @@ pipeline {
                         git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerTest'
+                        bat 'npm run triggerLoginTest'
                     }
                 }
-                stage('Slave Node 2') {
-                    agent {
-                        label "remote_node2"
-                    }
-                    steps {
-                        git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
-                        bat 'npm install'
-                        bat 'npm update'
-                        bat 'npm run triggerTest'
-                    }
-                }
+                // stage('Slave Node 2') {
+                //     agent {
+                //         label "remote_node2"
+                //     }
+                //     steps {
+                //         git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
+                //         bat 'npm install'
+                //         bat 'npm update'
+                //         bat 'npm run triggerTest'
+                //     }
+                // }
             }
         }
     }
