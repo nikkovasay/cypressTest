@@ -14,7 +14,7 @@ pipeline {
                         git credentialsId: 'jenkins', url: 'https://github.com/nikkovasay/cypressTest.git'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerLoginTest'
+                        bat 'npm run triggerTest'
                     }
                 }
                 stage('Slave Node 2') {
