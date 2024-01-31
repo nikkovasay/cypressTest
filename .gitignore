@@ -3,3 +3,5 @@ node_modules
 cypress/results/
 cypress/screenshots
 mochawesome-report
+gh-pages
+gh-pages.pub
