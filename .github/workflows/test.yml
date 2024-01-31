@@ -1,0 +1,32 @@
+name: Deploy React Project
+on:
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Code
+        uses: actions/checkout@v3 #uses key allows to use actions from github marketplace
+      - name: Install NodeJS
+        uses: actions/setup-node@v3 
+        with:
+          node-version: 21
+      - name: Install Dependencies
+        run: npm ci # installs dependencies based on package-lock.json file
+      - name: Run Tests
+        run: npm run loginTest:Headless
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Download Code
+#         uses: actions/checkout@v3 #uses key allows to use actions from github marketplace
+#       - name: Install NodeJS
+#         uses: actions/setup-node@v3 
+#         with:
+#           node-version: 18
+#       - name: Install Dependencies
+#         run: npm ci # installs dependencies based on package-lock.json file
+#       - name: Build Project
+#         run: npm run build
+#       - name: Deploy
+#         run: echo "Deploying . . ."
