@@ -15,6 +15,7 @@ jobs:
         run: npm ci # installs dependencies based on package-lock.json file
       - name: Run Tests
         run: npx cypress run --browser electron
+        if: success() || failure()
       - name: Merge test results into one
         run: npm run mochawesome-merge
       # - name: Deploy report page
