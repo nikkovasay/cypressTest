@@ -1,15 +1,14 @@
-import { getAndVisible, xpathAndVisible } from "../Utils/Utils";
-
 class contactUsPage {
   elements = {
-    lblContactUs: () => xpathAndVisible('//h2[text()="CONTACT US"]'),
-    txtFirstName: () => xpathAndVisible('//input[@name="first_name"]'),
-    txtLastName: () => xpathAndVisible('//input[@name="last_name"]'),
-    txtEmail: () => xpathAndVisible('//input[@name="email"]'),
-    txtComments: () => xpathAndVisible('//textarea[@name="message"]'),
-    btnReset: () => xpathAndVisible('//input[@type="reset"]'),
-    btnSubmit: () => xpathAndVisible('//input[@type="submit"]'),
-    lblThankYou: () => xpathAndVisible("//h1")
+    lblContactUs: () => cy.getByXpath('//h2[text()="CONTACT US"]'),
+    txtFirstName: () => cy.getByXpath('//input[@name="first_name"]'),
+    txtLastName: () => cy.getByXpath('//input[@name="last_name"]'),
+    txtEmail: () => cy.getByXpath('//input[@name="email"]'),
+    txtComments: () => cy.getByXpath('//textarea[@name="message"]'),
+    btnReset: () => cy.getByXpath('//input[@type="reset"]'),
+    btnSubmit: () => cy.getByXpath('//input[@type="submit"]'),
+    lblThankYou: () => cy.getByXpath("//h1")
+
   };
 
 

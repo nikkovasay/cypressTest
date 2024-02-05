@@ -1,19 +1,12 @@
 /// <reference types="Cypress" />
 
 
-import { getAndVisible, xpathAndVisible } from "../../Utils/Utils";
+import { getAndVisible,  } from "../../Utils/Utils";
 import contactUsPage from "../../pages/contactUsPage";
 // import profile from '../../fixtures/profile.json'
 
 //Elements
 let lblContactUs = '//h1[text()="CONTACT US"]';
-
-let txtFirstName = 'input[name="first_name"]';
-let txtLastName = 'input[name="last_name"]';
-let txtEmail = 'input[name="email"]';
-let txtComments = 'textarea[name="message"]';
-let btnReset = 'input[type="reset"]';
-let btnSubmit = 'input[type="submit"]';
 let lblThankYou = "h1";
 
 const testData = [

@@ -20,6 +20,10 @@
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 
+Cypress.Commands.add('getByXpath',(element)=>{
+  return cy.xpath(element).should('be.visible')
+})
+
 Cypress.Commands.add('ignoreXHRLogs', () => {
   cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
   });

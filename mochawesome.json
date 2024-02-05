@@ -1,20 +1,20 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 5,
-    "passes": 5,
+    "suites": 12,
+    "tests": 14,
+    "passes": 13,
     "pending": 0,
-    "failures": 0,
-    "testsRegistered": 5,
-    "passPercent": 100,
+    "failures": 1,
+    "testsRegistered": 14,
+    "passPercent": 92.85714285714286,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
     "start": "2024-01-29T02:29:19.898Z",
-    "end": "2024-01-29T02:30:34.200Z",
-    "duration": 74302
+    "end": "2024-01-31T19:49:39.966Z",
+    "duration": 235220068
   },
   "results": [
     {
@@ -254,6 +254,492 @@
           "pending": [],
           "skipped": [],
           "duration": 8526,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2f0e1885-8bda-4748-af51-e0a16dcafaa7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "file": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "50a0334b-509c-4d3c-b6b4-3cbd6a184c0a",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 6678,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();\ncy.get(txtUsername).then(txtPassword => {\n  if (txtPassword) {\n    (0, _Utils.getAndVisible)(txtUsername).type('problem');\n  } else {\n    (0, _Utils.getAndVisible)(txtUsername).type('not a problem');\n  }\n});",
+              "err": {},
+              "uuid": "d8b2b17d-e98f-48cb-bae1-8e515dc363cd",
+              "parentUUID": "50a0334b-509c-4d3c-b6b4-3cbd6a184c0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8b2b17d-e98f-48cb-bae1-8e515dc363cd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6678,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9e716448-0b7c-464e-b5bb-452e424ecd54",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "file": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9ae1c01-f71f-4e17-88de-64bd25db7ab5",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 5032,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();\ncy.get(txtUsername).then(txtPassword => {\n  if (txtPassword) {\n    (0, _Utils.getAndVisible)(txtUsername).type('problem');\n  } else {\n    (0, _Utils.getAndVisible)(txtUsername).type('not a problem');\n  }\n});",
+              "err": {},
+              "uuid": "cd983ab9-941b-4038-a4f0-af12d12b2980",
+              "parentUUID": "d9ae1c01-f71f-4e17-88de-64bd25db7ab5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cd983ab9-941b-4038-a4f0-af12d12b2980"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5032,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ebdf8e9c-91fb-425a-b8c3-d4419a63c006",
+      "title": "",
+      "fullFile": "cypress\\e2e\\4-google-tests\\cypress-radio-check-buttons.js",
+      "file": "cypress\\e2e\\4-google-tests\\cypress-radio-check-buttons.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94cb2eab-3b88-408b-817b-931f7040746b",
+          "title": "check and uncheck all boxes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check and vlidate check boxes",
+              "fullTitle": "check and uncheck all boxes check and vlidate check boxes",
+              "timedOut": null,
+              "duration": 5721,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get(\"#radio-buttons\").find('input[value*=\"orange\"]').check();\ncy.get(\"#radio-buttons\").find('input[name*=\"color\"]').eq(1).check().should('be.checked');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `#dropdown-checkboxes-radiobuttons`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `#dropdown-checkboxes-radiobuttons`, but never found it.\n    at Context.eval (webpack://cypress-automation-framework/./cypress/e2e/4-google-tests/cypress-radio-check-buttons.js:37:11)",
+                "diff": null
+              },
+              "uuid": "9299ed29-07ac-4e2d-8015-acf1681bbc58",
+              "parentUUID": "94cb2eab-3b88-408b-817b-931f7040746b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9299ed29-07ac-4e2d-8015-acf1681bbc58"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5721,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e6e9fbad-9ed6-4efb-861b-f53032a764e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "file": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cbdf1d4e-254e-4443-a337-47ba8424c368",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 4572,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();\ncy.get(txtUsername).then(txtPassword => {\n  if (txtPassword) {\n    (0, _Utils.getAndVisible)(txtUsername).type('problem');\n  } else {\n    (0, _Utils.getAndVisible)(txtUsername).type('not a problem');\n  }\n});",
+              "err": {},
+              "uuid": "18be24f6-961e-487f-aaf4-fa0d341b348c",
+              "parentUUID": "cbdf1d4e-254e-4443-a337-47ba8424c368",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 3367,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();",
+              "err": {},
+              "uuid": "5c314add-6fee-4283-a36f-3487a23f44b8",
+              "parentUUID": "cbdf1d4e-254e-4443-a337-47ba8424c368",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18be24f6-961e-487f-aaf4-fa0d341b348c",
+            "5c314add-6fee-4283-a36f-3487a23f44b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7939,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f5b4433d-d498-4417-b1d8-3eb8ec5fad8b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\cypress-basics.js",
+      "file": "cypress\\e2e\\5-login-tests\\cypress-basics.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bdf29de5-f285-472b-a428-802261521c24",
+          "title": "Cypress Basics",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "13cdaa60-c5ab-4251-8e8a-8a23146a59cf",
+              "title": "Proper tests for cypress basics",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "uses aliases and invoke methods",
+                  "fullTitle": "Cypress Basics Proper tests for cypress basics uses aliases and invoke methods",
+                  "timedOut": null,
+                  "duration": 8907,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tradeMeSearchPage.default.typeSearchTerm(tmData.SearchTerm);\n_tradeMeResultsPage.default.waitForPageToLoad();\n_tradeMeResultsPage.default.clickOnFirstResult();",
+                  "err": {},
+                  "uuid": "eab95958-ab2b-4ca0-88ad-b9c4bf5f2259",
+                  "parentUUID": "13cdaa60-c5ab-4251-8e8a-8a23146a59cf",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "eab95958-ab2b-4ca0-88ad-b9c4bf5f2259"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8907,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8ddea221-6190-4417-b85e-4b76c1af1494",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "file": "cypress\\e2e\\5-login-tests\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "621c2daf-b77c-4fd5-ba96-32d5e0f25c27",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 5207,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();\ncy.get(txtUsername).then(txtPassword => {\n  if (txtPassword) {\n    (0, _Utils.getAndVisible)(txtUsername).type('problem');\n  } else {\n    (0, _Utils.getAndVisible)(txtUsername).type('not a problem');\n  }\n});",
+              "err": {},
+              "uuid": "9320ea4d-d029-43ca-a3b4-107b72036f5a",
+              "parentUUID": "621c2daf-b77c-4fd5-ba96-32d5e0f25c27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should log in to the test website and log out",
+              "fullTitle": "Login should log in to the test website and log out",
+              "timedOut": null,
+              "duration": 4032,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Type in username \n(0, _Utils.getAndVisible)(txtUsername).type(\"student\");\n//Type in password\n(0, _Utils.getAndVisible)(txtPassword).type(\"Password123\");\n//Click submit\n(0, _Utils.getAndVisible)(btnSubmit).click();\n//verify banner is visible and text matches logged in state\n(0, _Utils.getAndVisible)(lblLoggedInBanner).should('contain.text', 'Logged In Successfully');\n//log out \n(0, _Utils.getAndVisible)(btnLogout).click();",
+              "err": {},
+              "uuid": "bd5f0857-2f89-4f05-9c02-55f2c51486ee",
+              "parentUUID": "621c2daf-b77c-4fd5-ba96-32d5e0f25c27",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9320ea4d-d029-43ca-a3b4-107b72036f5a",
+            "bd5f0857-2f89-4f05-9c02-55f2c51486ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9239,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cea9c130-5e14-4533-b2c3-8c9635dba326",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-login-tests\\cypress-basics.js",
+      "file": "cypress\\e2e\\5-login-tests\\cypress-basics.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "065f51c9-e471-4b4b-a0ca-59a7299b7b56",
+          "title": "Cypress Basics",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "dfb3ebb8-b404-4cc5-98c8-095c128778b2",
+              "title": "Proper tests for cypress basics",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "uses aliases and invoke methods",
+                  "fullTitle": "Cypress Basics Proper tests for cypress basics uses aliases and invoke methods",
+                  "timedOut": null,
+                  "duration": 10746,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tradeMeSearchPage.default.typeSearchTerm(tmData.SearchTerm);\n_tradeMeResultsPage.default.waitForPageToLoad();\n_tradeMeResultsPage.default.clickOnFirstResult();",
+                  "err": {},
+                  "uuid": "3f6fb6d7-eef2-4e52-9b74-1d533630d292",
+                  "parentUUID": "dfb3ebb8-b404-4cc5-98c8-095c128778b2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3f6fb6d7-eef2-4e52-9b74-1d533630d292"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 10746,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
