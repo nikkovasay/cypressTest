@@ -14,12 +14,12 @@ jobs:
       - name: Install Dependencies
         run: npm ci # installs dependencies based on package-lock.json file
       - name: Run Tests
-        run: npx cypress run --browser electron
+        run: npm run loginTest:Headless
         if: success() || failure()
       - name: Merge test results into one
         run: npm run mochawesome-merge
       - name: clean up files
-        run: npm prereport:mochawesome
+        run: npm run prereport:mochawesome
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
         with:
