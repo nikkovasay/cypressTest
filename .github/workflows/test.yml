@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci # installs dependencies based on package-lock.json file
       - name: Run Tests
-        run: npm run triggerLoginTest
+        run: npx cypress run --headed --browser electron --spec cypress\\e2e\\5-login-tests\\*.js --record --key 41ab373d-7fea-46e8-88a8-fd8adda7537d --parallel
         if: success() || failure()
       - name: Merge test results into one
         run: npm run mochawesome-merge
